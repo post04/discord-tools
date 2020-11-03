@@ -10,4 +10,4 @@ while (true) {
   if ((count % 40) === 0) await new Promise(_ => setTimeout(_, 2000));
   banUser(serverId, members[count].userId);
   count++;
-}```
+}
