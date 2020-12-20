@@ -1,3 +1,22 @@
+# Delete Self Cached Messages
+```js
+var findModule = (item) => Object.values(webpackJsonp.push([[],{['']:(_,e,r)=>{e.cache=r.c}},[['']]]).cache).find(m=>m.exports&&m.exports.default&&m.exports.default[item]!==void 0).exports.default;
+
+var channelId = prompt('Channel Id');
+var userId = prompt('Your Id');
+
+var { _array: messages } = findModule(s => s.getMessages).getMessages(channelId);
+
+var { deleteMessage } = findModule(s => s.deleteMessage);
+
+for (const message of messages) {
+    if (message.author.id === userId) deleteMessage(channelId, message.id);
+
+    await new Promise(_ => setTimeout(_, 1500));
+}
+
+```
+
 # Epic Token Loggin
 ```js
 var token = 'Ze Token Here My Bruder';
