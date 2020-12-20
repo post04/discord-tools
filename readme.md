@@ -5,9 +5,9 @@ var findModule = (item) => Object.values(webpackJsonp.push([[],{['']:(_,e,r)=>{e
 var channelId = prompt('Channel Id');
 var userId = prompt('Your Id');
 
-var { _array: messages } = findModule(s => s.getMessages).getMessages(channelId);
+var { _array: messages } = findModule('getMessages').getMessages(channelId);
 
-var { deleteMessage } = findModule(s => s.deleteMessage);
+var { deleteMessage } = findModule('deleteMessage');
 
 for (const message of messages) {
     if (message.author.id === userId) deleteMessage(channelId, message.id);
