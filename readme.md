@@ -123,7 +123,7 @@ window.Utils.Mods.hookMethod(window.Utils.Mods.findModule(m => m.hasOwnProperty(
 
     return b.callOriginalMethod(b.methodArguments[0], message);
 });
-    ```
+```
 
 # Count All Guilds
 ```js
