@@ -1,3 +1,7 @@
+# Description
+
+A bot that detected a nitro gift `discord.gift/code` being sent and instantly claims it.
+
 # How to use
 
 Have [go](https://golang.org/dl/) installed.
