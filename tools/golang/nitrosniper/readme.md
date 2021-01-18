@@ -1,6 +1,6 @@
 # How to use
 
-Have (go)[https://golang.org/dl/] installed.
+Have [go](https://golang.org/dl/) installed.
 
 git clone this repo.
 
