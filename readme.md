@@ -6,3 +6,4 @@ This repo is just a collection of scripts and tools that don't abide by discord 
 
     console-scripts: scripts you can paste in your discord console, all those scripts have their own descriptions.
     tools: programs not ran in discord console, every tool in there has it's own description.
+    exploits: exploits in discord that were found and put into a tool.
