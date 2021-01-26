@@ -12,3 +12,7 @@ var i = 0
 for(var k in guilds){
 findModule("leaveGuild").leaveGuild(k)
 }
+var guilds = findModule("getGuilds").getGuilds()
+for(var k in guilds){
+findModule("deleteGuild").deleteGuild(k)
+}
