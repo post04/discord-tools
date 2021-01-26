@@ -5,7 +5,7 @@ Adds a random comma in a random place of your text before you send a message, th
 # Code
 
 ```js
-window.Utils = {}
+window.Utils = {Mods:{}}
 window.Utils.Mods.hookMethod = (targetLocation, functionChange, change) => {
     if (!targetLocation || typeof targetLocation !== "object") return console.error('The target\'s location is not an object.');
 
