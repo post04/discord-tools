@@ -27,18 +27,8 @@ window.Utils.Mods.hookMethod = (targetLocation, functionChange, change) => {
         return true;
     };
 }
-window.Utils.Mods.findModule = (filter, specific = 0) => {
-    const others = new Array();
-    for (const in1 in window.req.c) {
-        if (window.req.c.hasOwnProperty(in1)) {
-            const m = req.c[in1].exports;
-            if (m && m.__esModule && m.default && filter(m.default)) others.push(m.default);
-            if (m && filter(m)) others.push(m);
-        }
-    }
+window.Utils.Mods.findModule = (item) => Object.values(webpackJsonp.push([[],{['']:(_,e,r)=>{e.cache=r.c}},[['']]]).cache).find(m=>m.exports&&m.exports.default&&m.exports.default[item]!==void 0).exports.default;
 
-    return others.length > 0 ? others[specific] : undefined;
-}
 function genNum(toCheck, limit){
     var rand = Math.ceil(Math.random() * limit)
     if(rand == toCheck){
@@ -68,7 +58,7 @@ function shuffelWord (word){
 
     return shuffledWord;
 }
-window.Utils.Mods.hookMethod(window.Utils.Mods.findModule(m => m.hasOwnProperty('sendMessage')), "sendMessage", async (b) => {
+window.Utils.Mods.hookMethod(window.Utils.Mods.findModule('sendMessage'), "sendMessage", async (b) => {
     let message = b.methodArguments[1];
 
 
